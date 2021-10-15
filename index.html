@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика №19, задания №2</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="image/icon.png" type="image/png">
+</head>
+<body>
+    <h1>Опросник для обладателей котиков =^-^= </h1>
+    <form>
+        <div class="divStyle">
+            <label for="nikename">Введите кличку питомца:</label>
+            <input type="text" id="nikename" pattern="^[а-яА-ЯёЁa-zA-Z0-9- ]+$" value=""
+            title="Кличка может состоять из набора букв и цифр (латиница или кириллица), тире и пробелов " required />
+        </div>
+        
+        <div class="divStyle">
+            Укажите пол питомца:
+            <label for="she">Самка</label>
+            <input type="radio" name="sex" id="she" value="Самка" required />
+            <label for="he">Самец</label>
+            <input type="radio" name="sex" id="he" value="Самец" required />
+        </div> 
+        
+        <div class="divStyle">Выберите породу питомца:
+            <select id="breed">
+                <option value="Дворовой">Дворовой</option><option value="Домашний" selected>Домашний</option>
+                <option value="Сиамский">Сиамский</option><option value="Бенгальский">Бенгальский</option>
+                <option value="Британская">Британская</option><option value="Корниш рекс">Корниш рекс</option>
+                <option value="Персидский">Персидский</option><option value="Мейн-кун">Мейн-кун</option>
+                <option value="Сфинкс">Сфинкс</option><option value="Сибирский">Сибирский</option>
+                <option value="Др.">Др.</option>
+            </select>
+        </div>
+            
+        <fieldset class="fieldsetStyle1">
+            <legend>Выберите, чем питается Ваш питомец:</legend>
+            <input type="checkbox" name="food" id="food1" checked="checked" value="Натуральный корм" />
+            <label for="food1">Натуральный корм</label></br>
+            <input type="checkbox" name="food" id="food2" value="Сухой корм" />
+            <label for="food2">Сухой корм</label></br>
+            <input type="checkbox" name="food" id="food3" value="Влажный корм" />
+            <label for="food3">Влажный корм</label></br>
+        </fieldset>
+        
+        <fieldset class="fieldsetStyle2">
+            <legend>ФИО владельца:</legend>
+            <div><label for="lastname">Введите фамилию владельца:</label>
+                <input type="text" id="lastname" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Фамилия может состоять из набора букв (латиница или кириллица), двойная фамилия разделяется тире" required />
+            <label for="firstname1">Введите имя владельца:</label>
+                <input type="text" id="firstname1" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Имя может состоять из набора букв (латиница или кириллица), двойное имя разделяется тире" required />
+            <label for="firstname2">Введите отчество владельца:</label>
+                <input type="text" id="firstname2" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Отчество может состоять из набора букв (латиница или кириллица)" required /></div>                               
+        </fieldset>
+        
+        <fieldset class="fieldsetStyle3"style="width: 500px;">
+            <legend>Контакты владельца:</legend>
+                <label for="tel">Введите номер телефона владельца:</label>
+                <input type="tel" id="tel" pattern="^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$" 
+                    title = "Формат телефона (212) 348-2626 или +1 832-393-1000"required /> 
+                <label for="address">Введите адрес проживания владельца:</label>
+                <textarea rows="5" cols="50" id="address"></textarea>                
+        </fieldset>
+        
+        <div class="divStyle">
+            <button type="button" id=sendBtn>Отправить</button>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
